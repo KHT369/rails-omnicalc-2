@@ -4,12 +4,11 @@ class AdditionController < ApplicationController
   end
 
   def add_these
-    @first_numb = params.fetch("first_num").to_f
-    @second_numb = params.fetch("second_num").to_f
+    @first_numb = params.fetch("first_number").to_f
+    @second_numb = params.fetch("second_number").to_f
 
     @result = @first_numb + @second_numb
 
-
-    render({ :template => "addition_template/add_results" })
+    render({ :template => "addition_templates/add_results" })
   end
 end
